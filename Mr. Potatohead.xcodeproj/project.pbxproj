@@ -96,6 +96,7 @@
 				TargetAttributes = {
 					F8D519B21E4CDC5200B72742 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 3CH6468FQ7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -260,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CH6468FQ7;
 				INFOPLIST_FILE = "Mr. Potatohead/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.Mr--Potatohead";
@@ -272,6 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3CH6468FQ7;
 				INFOPLIST_FILE = "Mr. Potatohead/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "nl.mprog.Mr--Potatohead";
