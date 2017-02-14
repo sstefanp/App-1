@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+@objc class ViewController: UIViewController {
 
     // outlets for images
     @IBOutlet weak var hat: UIImageView!
@@ -21,6 +21,37 @@ class ViewController: UIViewController {
     @IBOutlet weak var eyebrows: UIImageView!
     @IBOutlet weak var nose: UIImageView!
     @IBOutlet weak var arms: UIImageView!
+    @IBOutlet weak var controlView: UIView!
+    
+    override func viewWillLayoutSubviews() {
+        // landscape
+        if self.view.bounds.width > self.view.bounds.height {
+            // switches
+            self.controlView.frame.size.width = 0.5 * self.view.bounds.width
+            self.controlView.frame.origin.x = 0.5 * self.view.bounds.width
+            self.controlView.frame.origin.y = 0
+            self.controlView.frame.size.height = self.view.bounds.height
+            // image
+            self.potatoView.frame.origin.x = 0
+            self.potatoView.frame.origin.y = 64
+            self.potatoView.frame.size.width = 0.5 * self.view.bounds.width
+            self.potatoView.frame.size.height = self.view.bounds.height - 64
+        }
+            // portret
+        else {
+            // switches
+            self.controlView.frame.size.height = 0.5 * self.view.bounds.height
+            self.controlView.frame.origin.x = 0
+            self.controlView.frame.origin.y = 0.5 * self.view.bounds.height
+            self.controlView.frame.size.width = self.view.bounds.width
+            // image
+            self.potatoView.frame.origin.x = 0
+            self.potatoView.frame.origin.y = 44
+            self.potatoView.frame.size.height = 0.5 * self.view.bounds.height - 44
+            self.potatoView.frame.size.width = self.view.bounds.width
+        }
+    }
+    @IBOutlet weak var potatoView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +62,6 @@ class ViewController: UIViewController {
     }
     
     // switches
-    
     @IBAction func HatSwitch(_ sender: UISwitch) {
         if hat.isHidden == true {
             hat.isHidden = false
