@@ -24,7 +24,7 @@ import UIKit
     @IBOutlet weak var controlView: UIView!
     
     override func viewWillLayoutSubviews() {
-        // landscape
+        // app is in landscape view
         if self.view.bounds.width > self.view.bounds.height {
             // switches
             self.controlView.frame.size.width = 0.5 * self.view.bounds.width
@@ -37,7 +37,7 @@ import UIKit
             self.potatoView.frame.size.width = 0.5 * self.view.bounds.width
             self.potatoView.frame.size.height = self.view.bounds.height - 64
         }
-            // portret
+            // app is in portret view
         else {
             // switches
             self.controlView.frame.size.height = 0.5 * self.view.bounds.height
